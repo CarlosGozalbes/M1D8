@@ -26,7 +26,7 @@
         <li>1st</li>
         <li>2nd</li>
         <li>3rd</li>
-      </ul>
+  º    </ul>
 
       <a href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
 
@@ -68,10 +68,10 @@
       */
 
       const changePcontent = function () {
-        let pChildDiv = document.querySelectorAll("div p")
+        let pChildDiv = document.querySelector("div p")
 
         for(pChild of pChildDiv){
-          pChild[].innerText = "This is the new Paragraph"
+          pChild.innerText = "This is the new Paragraph"
         } 
       
         //
@@ -84,6 +84,11 @@
       const changeUrls = function () {
         let urls document.getElementsByTagName("a")
         urls.setAttribute('href', "http://google.com")
+        //links = document.queryselectorall("a")
+        //for (let i=0;i< links.length;i++){
+        //  const a = links[i];
+        //  a.href = "https://google.com" }
+        //document.getElementById("link").href ="http://google.com"
       };
 
       /* EXERCISE 5
@@ -102,7 +107,10 @@
       */
 
       const addParagraph = function (content) {
-        
+        let div = document.querySelectorAll("div")[0]
+        let p = document.createElement("p")
+        p.innerText = content
+        div.appendChild(p)
       };
 
       /* EXERCISE 7
@@ -112,7 +120,7 @@
       const firstUlDisappear = function () {
         
         let ul = document.getElementById("firstList");
-        ul.style.display = 'block';
+        ul.style.display = 'none';
       };
 
       /* EXERCISE 8
@@ -120,7 +128,11 @@
       */
 
       const paintItGreen = function () {
-        //
+        let ulist = document.querySelectorAll("ul")
+        for (let i=0; i< ulist.length;i++){
+          const ul = ulist[i];
+          ul.classlist.add("b-green")
+        }
       };
 
       /* EXERCISE 9
@@ -128,7 +140,8 @@
       */
 
       const makeItClickable = function () {
-        //
+        
+        }
       };
 
       /* EXERCISE 10
@@ -136,7 +149,10 @@
       */
 
       const changeFooterText = function () {
-        //
+        let newFooter =document.getElementById("footer");
+
+        newFooter.innerText ="NEW FOOTER"
+        newFooter.style.color ="blue"
       };
 
       /* EXERCISE 11
@@ -151,12 +167,13 @@
       */
 
       window.onload = function () {
-        //
+        alert("welcome");
       };
 
       /* EXERCISE 13
        Use HTML5 tags to properly provide semantic meaning to the different portions of the page.
       */
+      
     </script>
   
 
